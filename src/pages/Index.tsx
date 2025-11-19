@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { MovieCard } from "@/components/MovieCard";
+import { SentimentDemo } from "@/components/SentimentDemo";
 import { mockMovies } from "@/data/mockMovies";
 import { Film } from "lucide-react";
 
@@ -16,6 +17,8 @@ const Index = () => {
       </nav>
 
       <HeroSection />
+
+      <SentimentDemo />
 
       <section className="container mx-auto px-4 py-16">
         <div className="mb-12">
