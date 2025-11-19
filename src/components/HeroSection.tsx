@@ -11,11 +11,22 @@ export const HeroSection = () => {
           <Sparkles className="w-12 h-12 text-accent animate-pulse" />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold text-center mb-6 text-foreground">
-          Movie Review <span className="text-primary">Sentiment</span> Analyzer
+          Indian Cinema <span className="text-primary">Sentiment</span> Analyzer
         </h1>
         <p className="text-xl md:text-2xl text-center text-muted-foreground max-w-3xl mx-auto">
-          AI-powered analysis of movie reviews. Discover what audiences really think with real-time sentiment tracking.
+          AI-powered sentiment analysis of Bollywood, Tollywood & Sandalwood movies using real BookMyShow reviews
         </p>
+        <div className="flex flex-wrap justify-center gap-6 mt-8">
+          <div className="px-6 py-3 bg-secondary rounded-lg border border-border">
+            <div className="text-lg font-bold text-accent">🎬 Bollywood</div>
+          </div>
+          <div className="px-6 py-3 bg-secondary rounded-lg border border-border">
+            <div className="text-lg font-bold text-accent">🎭 Tollywood</div>
+          </div>
+          <div className="px-6 py-3 bg-secondary rounded-lg border border-border">
+            <div className="text-lg font-bold text-accent">🎪 Sandalwood</div>
+          </div>
+        </div>
         <div className="flex justify-center gap-8 mt-12 text-center">
           <div>
             <div className="text-4xl font-bold text-accent">1000+</div>
@@ -23,13 +34,13 @@ export const HeroSection = () => {
           </div>
           <div className="w-px bg-border" />
           <div>
-            <div className="text-4xl font-bold text-accent">500K+</div>
-            <div className="text-sm text-muted-foreground">Reviews Processed</div>
+            <div className="text-4xl font-bold text-accent">BookMyShow</div>
+            <div className="text-sm text-muted-foreground">Reviews Integration</div>
           </div>
           <div className="w-px bg-border" />
           <div>
-            <div className="text-4xl font-bold text-accent">Daily</div>
-            <div className="text-sm text-muted-foreground">Updates</div>
+            <div className="text-4xl font-bold text-accent">Day 1</div>
+            <div className="text-sm text-muted-foreground">Auto Updates</div>
           </div>
         </div>
       </div>
