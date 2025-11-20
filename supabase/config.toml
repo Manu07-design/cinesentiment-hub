@@ -2,3 +2,9 @@ project_id = "vpffuinzwipkbiclgrjp"
 
 [functions.analyze-sentiment]
 verify_jwt = false
+
+[functions.fetch-tmdb-movies]
+verify_jwt = false
+
+[functions.scrape-bookmyshow]
+verify_jwt = false
