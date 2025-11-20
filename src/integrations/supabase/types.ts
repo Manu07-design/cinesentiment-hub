@@ -14,7 +14,133 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      movie_sentiments: {
+        Row: {
+          average_score: number | null
+          id: string
+          movie_id: string | null
+          negative_count: number | null
+          neutral_count: number | null
+          overall_sentiment: string | null
+          positive_count: number | null
+          total_reviews: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          average_score?: number | null
+          id?: string
+          movie_id?: string | null
+          negative_count?: number | null
+          neutral_count?: number | null
+          overall_sentiment?: string | null
+          positive_count?: number | null
+          total_reviews?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          average_score?: number | null
+          id?: string
+          movie_id?: string | null
+          negative_count?: number | null
+          neutral_count?: number | null
+          overall_sentiment?: string | null
+          positive_count?: number | null
+          total_reviews?: number | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "movie_sentiments_movie_id_fkey"
+            columns: ["movie_id"]
+            isOneToOne: true
+            referencedRelation: "movies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      movies: {
+        Row: {
+          backdrop_url: string | null
+          created_at: string | null
+          genres: string[] | null
+          id: string
+          overview: string | null
+          poster_url: string | null
+          release_date: string | null
+          title: string
+          tmdb_id: number
+          updated_at: string | null
+          vote_average: number | null
+          vote_count: number | null
+        }
+        Insert: {
+          backdrop_url?: string | null
+          created_at?: string | null
+          genres?: string[] | null
+          id?: string
+          overview?: string | null
+          poster_url?: string | null
+          release_date?: string | null
+          title: string
+          tmdb_id: number
+          updated_at?: string | null
+          vote_average?: number | null
+          vote_count?: number | null
+        }
+        Update: {
+          backdrop_url?: string | null
+          created_at?: string | null
+          genres?: string[] | null
+          id?: string
+          overview?: string | null
+          poster_url?: string | null
+          release_date?: string | null
+          title?: string
+          tmdb_id?: number
+          updated_at?: string | null
+          vote_average?: number | null
+          vote_count?: number | null
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          created_at: string | null
+          id: string
+          movie_id: string | null
+          review_text: string
+          score: number | null
+          sentiment: string | null
+          source: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          movie_id?: string | null
+          review_text: string
+          score?: number | null
+          sentiment?: string | null
+          source?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          movie_id?: string | null
+          review_text?: string
+          score?: number | null
+          sentiment?: string | null
+          source?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_movie_id_fkey"
+            columns: ["movie_id"]
+            isOneToOne: false
+            referencedRelation: "movies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
